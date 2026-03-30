@@ -7,5 +7,12 @@
 {% block content %}
 
 
+                {% for profile in profiles %}
+                <ul>
+                    <li>{{ profile.username }}</li>
+                </ul>
+                {% endfor %}
+
+
 
 {% endblock %}

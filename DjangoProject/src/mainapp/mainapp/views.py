@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Profile
+
 
 def home(request):
     products = ["Cherries", "Apples", "Oranges", "Strawberries", "Pears", "Watermelons"]

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 PRODUCT_CHOICES = {
     ("appetizers","appetizers"),
     ("entrees","entrees"),
