@@ -4,10 +4,9 @@ from django.shortcuts import render
 from .models import Profile
 # Create your views here.
 
-
-
-
-def home(request):
+def profile_list(request):
     profiles = Profile.objects.all()
-    return render(request, "profiles/products_page.html", {"profiles":profiles})
-
+    ctx = {
+        "profiles": profiles,
+    }
+    return render(request, "profiles/profile_list.html", ctx)

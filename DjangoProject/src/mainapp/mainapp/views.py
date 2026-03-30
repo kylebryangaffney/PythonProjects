@@ -1,14 +1,12 @@
 from django.shortcuts import render
-from .models import Profile
+from profiles.models import Profile
 
 
 def home(request):
-    products = ["Cherries", "Apples", "Oranges", "Strawberries", "Pears", "Watermelons"]
-    names = ["Token", "Grinch", "Crow", "JR", "Hesher", "Crane"]
+    profiles = Profile.objects.all()
     ctx = {
-        "products": products,
-        "names": names,
+        "profiles": profiles
     }
 
-    
+
     return render(request, "home.html", ctx)

@@ -20,11 +20,13 @@ from django.contrib import admin
 from django.urls import path
 from .views import home
 
+
+
 urlpatterns = [
     path('', home, name="home"),
+    path('products/', include("products.urls")),
+    path('profiles/', include("profiles.urls")),
     path('admin/', admin.site.urls),
-    path('', include("products.urls")),
-    path('', include("profiles.urls")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
