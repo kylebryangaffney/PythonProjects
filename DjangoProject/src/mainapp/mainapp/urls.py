@@ -21,12 +21,13 @@ from django.urls import path
 from .views import home
 
 
-
+# setting all of the urls that we will use that extend off of the base url
 urlpatterns = [
     path('', home, name="home"),
     path('products/', include("products.urls")),
-    path('profiles/', include("profiles.urls")),
+    path('profiles/', include("profiles.urls", namespace="profiles")),
     path('admin/', admin.site.urls),
 ]
 
+# we add the other static files for the other parts of the css and js and images to the list we just made 
 urlpatterns += staticfiles_urlpatterns()
