@@ -14,7 +14,7 @@
             <input type="submit">
             <div class="frmBtn_container">
                 <button class="btn"><a href="{% url 'profiles:profile_delete' form.instance.pk %}">Delete</a></button>
-                <button class="btn"><a href="{% url 'home' %}">Cancel</a></button>
+                <button class="btn"><a href="{% url 'profiles:profile_list' %}">Cancel</a></button>
             </div>
         </div>
     </form>

@@ -19,7 +19,7 @@ def profile_detail(request, pk):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            return redirect("home")
+            return redirect("profiles:profile_list")
         else:
             print(form.errors)
     ctx = {"form": form}
@@ -31,7 +31,7 @@ def profile_create(request):
     form = ProfileForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect("home")
+        return redirect("profiles:profile_list")
     else:
         print(form.errors)
         form = ProfileForm()
@@ -44,7 +44,7 @@ def profile_delete(request, pk):
     profile = get_object_or_404(Profile, pk=pk)
     if request.method == "POST":
         profile.delete()
-        return redirect("home")
+        return redirect("profiles:profile_list")
     ctx = {"profile": profile}
     return render(request, "profiles/profile_delete_confirm.html", ctx)
 
@@ -56,7 +56,7 @@ def profile_confirmed(request):
         if form.is_valid():
             form.delete()
 
-    return redirect("home")
+    return redirect("profiles:profile_list")
 
 
 
