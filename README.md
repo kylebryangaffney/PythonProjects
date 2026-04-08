@@ -1,7 +1,28 @@
 # PythonProjects
 
-## Overview
-This repository contains Python projects created for The Tech Academy Python course. It serves as a central place to store, manage, and track my progress as I build out projects
+A collection of Python projects built during [The Tech Academy](https://www.learncodinganywhere.com/) Python & Software Developer Boot Camp.
 
-## Purpose
-This repository centrally organizes course projects, documents progress, and enables easy review or updates to past work.
+---
+
+## Projects
+
+| Folder | Description |
+|---|---|
+| [`DjangoProject`](https://github.com/kylebryangaffney/PythonProjects/tree/main/DjangoProject/src) | Full-featured Django web application built through the course progression |
+| [`DjangoUniversity`](https://github.com/kylebryangaffney/PythonProjects/tree/main/DjangoUniversity/src/mainapp) | Django app modeling a university structure with models, views, and templates |
+| [`Django_Checkbook`](https://github.com/kylebryangaffney/PythonProjects/tree/main/Django_Checkbook/src/mainapp) | Django-based checkbook/finance tracker with form handling and data persistence |
+
+---
+
+## Technologies
+
+- **Language:** Python 3
+- **Framework:** Django
+- **Database:** SQLite (via Django ORM)
+- **Tools:** Git, GitHub
+
+---
+
+## About
+
+These projects were developed as part of a structured curriculum. Each folder corresponds to a specific lesson step and reflects incremental skill-building — from core Python concepts through full Django web development.
